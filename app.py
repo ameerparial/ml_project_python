@@ -50,7 +50,7 @@ def get_eye_cordinate(geteye):
 
 
 def scaleImage(path):
-  eyedetect=cv2.CascadeClassifier('https://drive.google.com/file/d/1sDJ-70HBTt_RrNPk4hR07yUiaJDDL35f/view?usp=sharing')
+  eyedetect=cv2.CascadeClassifier('./haarcascade_eye.xml')
   try:
     image = path
     geteye=eyedetect.detectMultiScale(image)
@@ -105,7 +105,7 @@ def getAttributes(path):
 
 @st.cache
 def load_model(): 
-    model = joblib.load('https://drive.google.com/file/d/1-2MTwmgF63QI2UC_RkWDU0DYc6GVauyM/view?usp=sharing')
+    model = joblib.load('./random_forest.joblib')
     return model
 
 model = load_model()
