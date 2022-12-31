@@ -28,7 +28,7 @@ if image is not None:
 
     with st.spinner("🤖 AI is at Work! "):        
         label = 'Ameer Hamza'
-        st.write(image)
+        st.write(input_image)
     #st.success("Here you go!")
     st.balloons()
 else:
